@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>song recommend</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style.css')}}">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+<body style="background-color:black">
+
+	<form action="{{url_for('choose_type')}}" method="POST">
+		{%if data == "telugu"%}
+
+		<div class="title">
+		<p class="display-4">Telugu Singer</p>
+		
+		</div>
+		
+
+		<label><input type="radio" name="singer" value="S.P.B" checked="true"><div class="box1">S.P.B</div></label>
+		<label><input type="radio" name="singer" value="Sailaja"><div class="box1">Sailaja</div></label>
+		<br>
+		<label><input type="radio" name="singer" value="Anurag Kulkarni"><div class="box1">Anurag Kulkarni</div></label>
+		<label><input type="radio" name="singer" value="Ramya Behara"><div class="box1">Ramya Behara</div></label>
+		
+		<div class="title">
+			<p class="display">Choose your own singer</p>
+		</div>
+			<input type="text" name="singer">
+
+
+		{%elif data == "english"%}
+
+		<div class="title">
+		<p class="display-4">English singer</p>
+		</div>
+		<label><input type="radio" name="singer" value="Selena Gomez" checked="true"><div class="box1">Selena Gomez</div></label>
+		<label><input type="radio" name="singer" value="Justin Bieber"><div class="box1">Justin Bieber</div></label>
+		<br>
+		<label><input type="radio" name="singer" value="Ed Sheeran"><div class="box1">Ed Sheeran</div></label>
+		<label><input type="radio" name="singer" value="Ariana Grande"><div class="box1">Ariana Grande</div></label>
+		
+		
+		<div class="title">
+		<p class="display">Choose your own singer</p>
+		
+		</div>
+		<input type="text" name="singer">
+
+		{%elif data == "hindi"%}
+
+		<div class="title">
+		<p class="display-4">Hindi Singer</p>
+		</div>
+		<label><input type="radio" name="singer" value="Arijit Singh" checked="true"><div class="box1">Arijit Singh</div></label>
+		<label><input type="radio" name="singer" value="Arman Malik"><div class="box1">Arman Malik</div></label>
+		<br>
+		<label><input type="radio" name="singer" value="Shreya Goshal"><div class="box1">Shreya Goshal</div></label>
+		<label><input type="radio" name="singer" value="Neha Kakkar"><div class="box1">Neha Kakkar</div></label>
+		
+		
+		<div class="title">
+		<h1 class="display">Choose your own singer</h1>
+		
+		</div>
+		<input type="text" name="singer">
+		{%elif data == "tamil"%}
+
+		<div class="title">
+		<p class="display-4">Tamil Singer</p>
+		</div>
+		<label><input type="radio" name="singer" value="Sid Sriram" checked="true"><div class="box1">Sid Sriram</div></label>
+		<label><input type="radio" name="singer" value="Karthik"><div class="box1">Karthik</div></label>
+		<br>
+		<label><input type="radio" name="singer" value="Chinmayi"><div class="box1">Chinmayi</div></label>
+		<label><input type="radio" name="singer" value="Anirudh"><div class="box1">Anirudh</div></label>
+		
+		
+		<div class="title">
+		<h1 class="display">Choose your own singer</h1>
+		
+		</div>
+		<input type="text" name="singer">
+		{%endif%}
+
+		<br>
+		<button class="glow-on-hover" type="submit">Next</button>
+	</form>
+
+</body>
+</html>
